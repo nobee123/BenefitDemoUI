@@ -1,0 +1,20 @@
+<table class="table table-striped mt-3">
+  <thead>
+  <tr>
+    <th scope="col">Employee Name</th>
+    <th scope="col">Paycheck amount</th>
+    <th scope="col">Benefit cost per paycheck</th>
+    <th scope="col">Paycheck amount after benefit</th>    
+    <th scope="col">Benefit cost per Year</th>    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">   
+    <td>{{employee.firstName}} {{employee.lastName}}</td>    
+    <td>{{employee.payAmount}}</td>
+    <td>{{employee.benefit.costOfBenefitPerPayPeriod}}</td>
+    <td>{{employee.benefit.payCheckAmountAfterBenefit}}</td>
+    <td>{{employee.benefit.totalBenefitAmount}}</td>
+  </tr>
+  </tbody>
+</table>

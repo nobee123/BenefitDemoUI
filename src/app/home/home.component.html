@@ -1,0 +1,11 @@
+
+    <div class="row">
+        <app-employee></app-employee>
+    </div>
+    <div class="row mt-2">
+        <button (click)="calculate()" class="btn btn-primary">Calculate</button>
+    </div>
+
+    <div *ngIf="employees">
+        <app-benefit-summary [employees]="employees" class="row"></app-benefit-summary>
+    </div>

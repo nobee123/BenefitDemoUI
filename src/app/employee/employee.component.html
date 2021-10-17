@@ -1,0 +1,23 @@
+<button (click)="addEmployee()" class="row" class="btn btn-primary" id="addEmployeeButton">Add Employee</button>
+<div class="container">
+  <div *ngFor="let employee of employees">
+    <div class="row">
+      <div class="input-group  mt-3">
+        <input type="text" [(ngModel)]="employee.FirstName" class="form-control" placeholder="First Name">
+        <input type="text" [(ngModel)]="employee.LastName" class="form-control" placeholder="Last Name">
+        <div class="input-group-append">
+          <button (click)="addDependent(employee)" class="btn btn-outline-secondary" id="addDependentButton">Add Dependent</button>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let dependent of employee.Dependents" class="row mt-2">
+      <div class="input-group ml-3">
+        <div class="input-group-append">
+          <span class="input-group-text">Dependent</span>
+        </div>
+        <input type="text" [(ngModel)]="dependent.FirstName" class="form-control" placeholder="First Name">
+        <input type="text" [(ngModel)]="dependent.LastName" class="form-control" placeholder="Last Name">
+      </div>
+    </div>
+  </div>
+</div>
